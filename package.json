@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "scripts": {
+    "local": "http-server ./public"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  },
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "static.email.ses": "^0.1.3"
+  }
+}
