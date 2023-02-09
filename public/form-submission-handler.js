@@ -1,5 +1,12 @@
 (function() {
   // get all data in form and return object
+  const email = document.getElementById("email");
+  let emailToSend;
+
+  email.addEventListener("input", () => {
+    emailToSend = email.value
+  });
+
   function getFormData(form) {
     var elements = form.elements;
     var honeypot;
@@ -45,7 +52,7 @@
     formData.formDataNameOrder = JSON.stringify(fields);
     formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
     formData.formGoogleSendEmail
-      = form.dataset.email || ""; // no email by default
+      = emailToSend || ""; // no email by default
 
     return {data: formData, honeypot: honeypot};
   }
