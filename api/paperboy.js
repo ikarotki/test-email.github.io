@@ -1,5 +1,5 @@
 // use the .env if present, do nothing otherwise
-require('dotenv').config();
+require('.env').config();
 // the utility to handle StaticEmail requests
 const {create} = require('static.email.ses');
 // secrets revealed via dotenv or now
@@ -12,7 +12,7 @@ const {
 // the serverless function that now will use
 module.exports = create({
   site: 'weirdsite.online',  // put your domain here
-  sender: 'Ihar Karotki',// any sender name
+  sender: 'divxix',// any sender name
   to,
   region,
   accessKeyId,
